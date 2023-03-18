@@ -22,7 +22,10 @@ var albums = []album{
 }
 
 func main() {
+	test_connection()
+
 	router := gin.Default()
+
 	router.GET("/albums", getAlbums)
 	router.GET("/albums/:id", getAlbumByID)
 	router.POST("/albums", createAlbum)
